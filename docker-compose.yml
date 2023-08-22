@@ -18,7 +18,6 @@ services:
       - selenium-hub
     environment:
       - SELENIUM_REMOTE_URL=http://selenium-hub:4444/wd/hub
-      - SPRING_PROFILES_ACTIVE=strict
 
   notifier:
     image: doctobot/notifier:latest

@@ -1,7 +1,7 @@
 doctobot:
   scraper:
     selenium-hub-host: selenium-hub
-    strict: false
+    strict: true
 spring:
   rabbitmq:
     host: rabbitmq
