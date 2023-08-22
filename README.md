@@ -25,6 +25,16 @@ You can set up your email address(es) to receive your appointment notifications 
 You also need to configure an email address and the SMTP to send the notifications in the [notifier properties](https://github.com/GabinL21/doctobot/blob/main/notifier/src/main/resources/application.yml).  
 If you're using Gmail, the SMTP is already configured, you only need to enter your email address and your [app password](https://support.google.com/mail/answer/185833).
 
+### Check Frequency (Optional)
+
+By default, the application is checking if an appointment is available every minute.  
+You can change this value in the [feeder properties](https://github.com/GabinL21/doctobot/blob/main/feeder/src/main/resources/application.yml).
+
+### Strict Mode (Optional)
+
+By default, the application is sending a notification only when it's sure that an appointment is available.  
+If you're not scared of false positives and potential spam, you can disable the strict mode in the [scraper properties](https://github.com/GabinL21/doctobot/blob/main/scraper/src/main/resources/application.yml).
+
 ## How to Run
 
 Doctobot is based on a microservice architecture.  
