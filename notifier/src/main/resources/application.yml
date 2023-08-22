@@ -1,0 +1,18 @@
+spring:
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: guest
+    password: guest
+
+doctobot:
+  notifier:
+    mode: email
+    email:
+      sender: "**********@gmail.com"
+      password: "******"
+      smtp:
+        host: "smtp.gmail.com"
+        port: 465
+        sslEnabled: true
+        authEnabled: true

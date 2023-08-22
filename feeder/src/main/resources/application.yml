@@ -1,0 +1,16 @@
+spring:
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: guest
+    password: guest
+
+doctobot:
+  feeder:
+    mode: manual
+    manual:
+      emails:
+        - "**********@gmail.com"
+        - "**********@gmail.com"
+      urls:
+        - "https://www.doctolib.fr/hopital-public/paris/hopital-bretonneau-aphp/booking/availabilities?specialityId=1&telehealth=false&placeId=establishment-7456&motiveCategoryIds%5B%5D=26622&motiveIds%5B%5D=674498"

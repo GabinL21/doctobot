@@ -1,0 +1,10 @@
+doctobot:
+  scraper:
+    selenium-hub-host: selenium-hub
+    strict: false
+spring:
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: guest
+    password: guest

@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+
+  feeder:
+    image: doctobot/feeder:latest
+    container_name: feeder
+    depends_on:
+      - rabbitmq
+    environment:
+      - SPRING_PROFILES_ACTIVE=secrets
+
+  scraper:
+    image: doctobot/scraper:latest
+    container_name: scraper
+    depends_on:
+      - rabbitmq
+      - selenium-hub
+    environment:
+      - SELENIUM_REMOTE_URL=http://selenium-hub:4444/wd/hub
+      - SPRING_PROFILES_ACTIVE=strict
+
+  notifier:
+    image: doctobot/notifier:latest
+    container_name: notifier
+    depends_on:
+      - rabbitmq
+    environment:
+      - SPRING_PROFILES_ACTIVE=secrets
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  selenium-hub:
+    image: selenium/hub
+    ports:
+      - "4442-4444:4442-4444"
+
+  chrome:
+    image: selenium/node-chrome
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443

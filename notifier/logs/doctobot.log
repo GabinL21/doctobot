@@ -1,0 +1,6 @@
+2023-08-21 22:13:07.252  INFO --- [           main] octobotNotifierTests : Starting DoctobotNotifierTests using Java 17.0.6 with PID 6748 (started by pokep in G:\Files\Projects\Doctobot\doctobot\notifier)
+2023-08-21 22:13:07.256  INFO --- [           main] octobotNotifierTests : No active profile set, falling back to 1 default profile: "default"
+2023-08-21 22:13:09.667  INFO --- [           main] octobotNotifierTests : Started DoctobotNotifierTests in 2.715 seconds (process running for 4.764)
+2023-08-21 22:58:21.941  INFO --- [           main] octobotNotifierTests : Starting DoctobotNotifierTests using Java 17.0.6 with PID 9784 (started by pokep in G:\Files\Projects\Doctobot\doctobot\notifier)
+2023-08-21 22:58:21.945  INFO --- [           main] octobotNotifierTests : No active profile set, falling back to 1 default profile: "default"
+2023-08-21 22:58:24.172  INFO --- [           main] octobotNotifierTests : Started DoctobotNotifierTests in 2.511 seconds (process running for 3.969)
