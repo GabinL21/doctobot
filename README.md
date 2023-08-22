@@ -15,15 +15,15 @@ seeking!
 
 ### Doctolib URLs
 
-You can enter a list of Doctolib appointment URLs to watch in the [feeder properties](https://github.com/GabinL21/doctobot/blob/main/feeder/src/main/resources/application.yml).
-
+You can enter a list of Doctolib appointment URLs to watch in the [feeder properties](https://github.com/GabinL21/doctobot/blob/main/feeder/src/main/resources/application.yml).  
 URLs must end in "/booking/availabilities", on the page where available appointments should show up.
 
 ### Emails
 
-- You can set up your email address(es) to receive your appointment notifications in the [feeder properties](https://github.com/GabinL21/doctobot/blob/main/feeder/src/main/resources/application.yml).
-- You also need to configure an email address and the SMTP to send the notifications in the [notifier properties](https://github.com/GabinL21/doctobot/blob/main/notifier/src/main/resources/application.yml).  
-  If you're using Gmail, the SMTP is already configured, you only need to enter your email address and your [app password](https://support.google.com/mail/answer/185833).
+You can set up your email address(es) to receive your appointment notifications in the [feeder properties](https://github.com/GabinL21/doctobot/blob/main/feeder/src/main/resources/application.yml).
+
+You also need to configure an email address and the SMTP to send the notifications in the [notifier properties](https://github.com/GabinL21/doctobot/blob/main/notifier/src/main/resources/application.yml).  
+If you're using Gmail, the SMTP is already configured, you only need to enter your email address and your [app password](https://support.google.com/mail/answer/185833).
 
 ## How to Run
 
