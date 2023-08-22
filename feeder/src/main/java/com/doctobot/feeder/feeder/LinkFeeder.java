@@ -16,6 +16,7 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 @Component
 @Log4j2
@@ -26,7 +27,7 @@ public class LinkFeeder {
     private final MessageConverter messageConverter;
     private final LinkService linkService;
 
-    @Scheduled(cron = "0 * * ? * *")
+    @Scheduled(fixedRateString = "${doctobot.feeder.frequency}", initialDelay = 30, timeUnit = TimeUnit.SECONDS)
     public void feed() {
         List<LinkMessage> linkMessages = getLinkMessages();
         for (LinkMessage linkMessage : linkMessages) {

@@ -7,6 +7,7 @@ spring:
 
 doctobot:
   feeder:
+    frequency: 60 # In seconds
     mode: manual
     manual:
       emails:
