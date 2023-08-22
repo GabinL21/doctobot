@@ -32,6 +32,9 @@ build/
 ### VS Code ###
 .vscode/
 
+### Log Files ###
+*.log
+
 ### Secret Values ###
 *-secrets.properties
 *-secrets.yml

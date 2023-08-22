@@ -2,7 +2,7 @@
 <Configuration status="WARN" monitorInterval="30">
     <Properties>
         <Property name="LOG_PATTERN">
-            %d{yyyy-MM-dd HH:mm:ss.SSS} %5p --- [%15.15t] %20.20c{1.} : %m%n%ex
+            %d{yyyy-MM-dd HH:mm:ss.SSS} %5p --- [%15.15t] %30.30{1.} : %m%n%ex
         </Property>
     </Properties>
     <Appenders>
@@ -10,8 +10,8 @@
             <PatternLayout pattern="${LOG_PATTERN}"/>
         </Console>
         <RollingFile name="FileAppender">
-            <FileName>logs/doctobot.log</FileName>
-            <FilePattern>logs/doctobot_%d{yyyy-MM-dd}.log</FilePattern>
+            <FileName>logs/scraper.log</FileName>
+            <FilePattern>logs/scraper_%d{yyyy-MM-dd}.log</FilePattern>
             <PatternLayout pattern="${LOG_PATTERN}"/>
             <Policies>
                 <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
@@ -22,18 +22,7 @@
     <Loggers>
         <Root level="info">
             <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="FileAppender"/>
         </Root>
-        <Logger name="com.doctobot" level="info" additivity="false">
-            <AppenderRef ref="ConsoleAppender"/>
-            <AppenderRef ref="FileAppender"/>
-        </Logger>
-        <Logger name="com.doctobot.scraper" level="info" additivity="false">
-            <AppenderRef ref="ConsoleAppender"/>
-            <AppenderRef ref="FileAppender"/>
-        </Logger>
-        <Logger name="com.doctobot.notifier" level="info" additivity="false">
-            <AppenderRef ref="ConsoleAppender"/>
-            <AppenderRef ref="FileAppender"/>
-        </Logger>
     </Loggers>
 </Configuration>
